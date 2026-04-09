@@ -4,82 +4,75 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fórmula Empírica — Niveles 1 al 4</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0d0d0f;--card:#1a1a1e;--border:#2a2a30;--accent:#c8f04c;--accent2:#4cf0c0;--accent3:#f04c8a;--accent4:#c084fc;--text:#f0efe8;--muted:#888880;--mono:'DM Mono',monospace;--sans:'DM Sans',sans-serif;--display:'Syne',sans-serif}
-body{background:var(--bg);color:var(--text);font-family:var(--sans);padding:40px 20px 80px}
-.page{max-width:840px;margin:0 auto}
 
-/* Header */
-.header{border-bottom:1px solid var(--border);padding-bottom:28px;margin-bottom:40px;position:relative}
-.header::before{content:'';position:absolute;bottom:-1px;left:0;width:100px;height:2px;background:var(--accent)}
-.label{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}
-h1{font-family:var(--display);font-size:clamp(26px,5vw,48px);font-weight:800;line-height:1.05;letter-spacing:-.02em}
+:root{
+  --bg:#0f0f10;
+  --card:#171718;
+  --border:#2a2a2c;
+  --text:#f5f5f4;
+  --muted:#a8a29e;
+  --accent:#d6d3d1;
+  --mono:'IBM Plex Mono',monospace;
+  --sans:'Source Sans 3',sans-serif;
+  --display:'Source Sans 3',sans-serif;
+}
+
+body{background:var(--bg);color:var(--text);font-family:var(--sans);padding:40px 20px 80px;line-height:1.55}
+.page{max-width:900px;margin:0 auto}
+
+.header{border-bottom:1px solid var(--border);padding-bottom:24px;margin-bottom:34px;position:relative}
+.header::before{content:'';position:absolute;bottom:-1px;left:0;width:88px;height:2px;background:var(--accent)}
+.label{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+h1{font-family:var(--display);font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.1;letter-spacing:-.015em}
 h1 span{color:var(--accent)}
-.subtitle{margin-top:10px;font-size:14px;color:var(--muted);line-height:1.6}
+.subtitle{margin-top:10px;font-size:15px;color:var(--muted);line-height:1.6}
 
-/* Recipe */
-.recipe{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:36px}
-.recipe-title{font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+.recipe{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:32px}
+.recipe-title{font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
 .pills{display:flex;flex-wrap:wrap;gap:8px}
-.pill{background:#1e2810;border:1px solid #3a4a1a;color:var(--accent);border-radius:99px;padding:5px 12px;font-family:var(--mono);font-size:12px}
+.pill{background:#202022;border:1px solid #2f2f31;color:#d6d3d1;border-radius:999px;padding:5px 12px;font-family:var(--mono);font-size:12px}
 
-/* Level heading */
-.lvl{display:flex;align-items:center;gap:14px;margin:44px 0 18px}
-.lvl-badge{font-family:var(--display);font-size:11px;font-weight:800;padding:5px 14px;border-radius:99px;letter-spacing:.04em;flex-shrink:0}
-.lvl1 .lvl-badge{background:#1a2233;color:#60a5fa;border:1px solid #2a3a55}
-.lvl2 .lvl-badge{background:#1e2810;color:var(--accent);border:1px solid #3a4a1a}
-.lvl3 .lvl-badge{background:#2a1a10;color:#fb923c;border:1px solid #4a2a1a}
-.lvl4 .lvl-badge{background:#2a1020;color:var(--accent3);border:1px solid #4a1a30}
-.lvl-title{font-family:var(--display);font-size:18px;font-weight:800;letter-spacing:-.01em}
-.lvl1 .lvl-title{color:#60a5fa}
-.lvl2 .lvl-title{color:var(--accent)}
-.lvl3 .lvl-title{color:#fb923c}
-.lvl4 .lvl-title{color:var(--accent3)}
+.lvl{display:flex;align-items:center;gap:12px;margin:40px 0 16px}
+.lvl-badge{font-family:var(--display);font-size:11px;font-weight:700;padding:5px 13px;border-radius:999px;letter-spacing:.03em;flex-shrink:0;border:1px solid var(--border);background:#202022;color:#d6d3d1}
+.lvl-title{font-family:var(--display);font-size:18px;font-weight:700;letter-spacing:-.01em;color:#f5f5f4}
+.lvl1 .lvl-badge,.lvl2 .lvl-badge,.lvl3 .lvl-badge,.lvl4 .lvl-badge{background:#202022;color:#d6d3d1;border-color:#323235}
 
-/* Sub-section */
-.sec{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin:24px 0 10px}
-
-/* Exercise card */
-.ex{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;overflow:hidden}
+.ex{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.25)}
 .ex-top{padding:16px 20px;display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:start}
 .ex-num{font-family:var(--display);font-size:24px;font-weight:800;color:var(--accent);line-height:1}
-.ex-q{font-family:var(--display);font-size:13.5px;font-weight:700;line-height:1.4;padding-top:3px}
-.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
-.chip{font-family:var(--mono);font-size:11px;background:#1a1a22;border:1px solid var(--border);border-radius:6px;padding:3px 8px;color:var(--accent2)}
+.ex-q{font-family:var(--display);font-size:15px;font-weight:700;line-height:1.45;padding-top:2px;color:#f5f5f4}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{font-family:var(--mono);font-size:11px;background:#202022;border:1px solid var(--border);border-radius:6px;padding:3px 8px;color:#d6d3d1}
 
-/* Steps */
 .steps{border-top:1px solid var(--border);padding:14px 20px;display:grid;gap:9px}
 .step{display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start}
-.sn{width:24px;height:24px;border-radius:50%;background:#1e1e24;border:1px solid var(--border);font-family:var(--mono);font-size:10px;color:var(--muted);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
-.sc{font-size:12.5px;line-height:1.65;color:#ccc8c0}
-.sc b{color:var(--text);font-weight:500}
+.sn{width:24px;height:24px;border-radius:50%;background:#202022;border:1px solid var(--border);font-family:var(--mono);font-size:10px;color:#a8a29e;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.sc{font-size:13px;line-height:1.7;color:#d6d3d1}
+.sc b{color:#f5f5f4;font-weight:600}
 
-/* Table */
 .t{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:11px;margin:5px 0}
-.t th{text-align:left;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.05em;padding:4px 7px;border-bottom:1px solid var(--border)}
-.t td{padding:5px 7px;color:#ccc;border-bottom:1px solid #1e1e24}
+.t th{text-align:left;color:#a8a29e;font-size:10px;text-transform:uppercase;letter-spacing:.04em;padding:5px 7px;border-bottom:1px solid var(--border)}
+.t td{padding:6px 7px;color:#d6d3d1;border-bottom:1px solid #232325}
 .t tr:last-child td{border-bottom:none}
-.t td:first-child{color:var(--accent2);font-weight:500}
-.t td:last-child{color:var(--accent);font-weight:500}
+.t td:first-child{color:#f5f5f4;font-weight:600}
+.t td:last-child{color:#f5f5f4;font-weight:600}
 
-/* Tip */
-.tip{background:#0f1a0a;border:1px solid #2a3a1a;border-left:3px solid var(--accent);border-radius:10px;padding:10px 14px;margin:6px 20px 2px;font-size:12px;color:#aab890;line-height:1.6}
-.tip b{color:var(--accent)}
+.tip{background:#1b1b1d;border:1px solid #2b2b2e;border-left:3px solid var(--accent);border-radius:10px;padding:10px 14px;margin:6px 20px 2px;font-size:12.5px;color:#d6d3d1;line-height:1.65}
+.tip b{color:#f5f5f4}
 
-/* Concept (theory) */
-.concept{padding:14px 20px;border-top:1px solid var(--border);font-size:12.5px;color:#bbb8b0;line-height:1.7}
-.concept b{color:var(--text)}
-.eg{background:#1a1a22;border-radius:8px;padding:8px 12px;margin-top:7px;font-family:var(--mono);font-size:11px;color:var(--accent2);line-height:1.6}
+.concept{padding:14px 20px;border-top:1px solid var(--border);font-size:13px;color:#d6d3d1;line-height:1.75}
+.concept b{color:#f5f5f4}
+.eg{background:#202022;border:1px solid var(--border);border-radius:8px;padding:8px 12px;margin-top:8px;font-family:var(--mono);font-size:11px;color:#d6d3d1;line-height:1.6}
 
-/* Answer */
-.ans{border-top:1px solid var(--border);padding:12px 20px;display:flex;align-items:center;gap:12px;background:#121612}
-.ans-lbl{font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;flex-shrink:0}
-.ans-f{font-family:var(--display);font-size:17px;font-weight:800;color:var(--accent);letter-spacing:-.01em}
-.ans-n{font-size:11px;color:var(--muted);margin-left:auto;font-style:italic}
+.ans{border-top:1px solid var(--border);padding:12px 20px;display:flex;align-items:center;gap:12px;background:#151516}
+.ans-lbl{font-family:var(--mono);font-size:10px;color:#a8a29e;text-transform:uppercase;letter-spacing:.08em;flex-shrink:0}
+.ans-f{font-family:var(--display);font-size:17px;font-weight:700;color:#f5f5f4;letter-spacing:-.005em}
+.ans-n{font-size:11px;color:#a8a29e;margin-left:auto;font-style:italic}
 
-footer{margin-top:56px;text-align:center;font-family:var(--mono);font-size:10px;color:#444;letter-spacing:.08em}
+footer{margin-top:52px;text-align:center;font-family:var(--mono);font-size:10px;color:#78716c;letter-spacing:.06em}
 </style>
 </head>
 <body>
@@ -192,406 +185,44 @@ footer{margin-top:56px;text-align:center;font-family:var(--mono);font-size:10px;
 <!-- ===== NIVEL 2 ===== -->
 <div class="lvl lvl2"><span class="lvl-badge">NIVEL 2</span><span class="lvl-title">Aplicación Directa</span></div>
 
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">11</div><div>
-    <div class="ex-q">Determina la fórmula empírica</div>
-    <div class="chips"><span class="chip">40% C</span><span class="chip">6.7% H</span><span class="chip">53.3% O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">Asumir 100 g → C=40g, H=6.7g (67 67 67 67), O=53.3g</div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">
-      <table class="t">
-        <tr><th>Elem.</th><th>mol</th><th>÷ menor (3.33)</th><th>ratio</th></tr>
-        <tr><td>C</td><td>40÷12 = 3.33</td><td>1</td><td>1</td></tr>
-        <tr><td>H</td><td>6.7÷1 = 6.70</td><td>2</td><td>2</td></tr>
-        <tr><td>O</td><td>53.3÷16 = 3.33</td><td>1</td><td>1</td></tr>
-      </table>
-    </div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CH₂O</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">12</div><div>
-    <div class="ex-q">Composición centesimal del CH₄</div>
-    <div class="chips"><span class="chip">C=12, H=1</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">Masa molar CH₄ = 12+4(1) = <b>16 g/mol</b></div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">% C = (12÷16)×100 = <b>75%</b> &nbsp;|&nbsp; % H = (4÷16)×100 = <b>25%</b></div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">C: 75% | H: 25%</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">13</div><div>
-    <div class="ex-q">Determina la fórmula empírica</div>
-    <div class="chips"><span class="chip">52.2% C</span><span class="chip">13.0% H</span><span class="chip">34.8% O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">
-      <table class="t">
-        <tr><th>Elem.</th><th>mol</th><th>÷ menor (2.175)</th><th>ratio</th></tr>
-        <tr><td>C</td><td>52.2÷12 = 4.35</td><td>2</td><td>2</td></tr>
-        <tr><td>H</td><td>13.0÷1 = 13.0</td><td>5.98 ≈ 6</td><td>6</td></tr>
-        <tr><td>O</td><td>34.8÷16 = 2.175</td><td>1</td><td>1</td></tr>
-      </table>
-    </div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">C₂H₆O</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">14</div><div>
-    <div class="ex-q">% de cada elemento en CaCO₃</div>
-    <div class="chips"><span class="chip">Ca=40, C=12, O=16</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">Masa molar = 40+12+3(16) = <b>100 g/mol</b></div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">% Ca = 40% &nbsp;|&nbsp; % C = 12% &nbsp;|&nbsp; % O = 48%</div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">Ca: 40% | C: 12% | O: 48%</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">15</div><div>
-    <div class="ex-q">Determina la fórmula empírica</div>
-    <div class="chips"><span class="chip">70% Fe</span><span class="chip">30% O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">Fe: 70÷55.8 = <b>1.254 mol</b> &nbsp;|&nbsp; O: 30÷16 = <b>1.875 mol</b></div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">÷1.254: &nbsp;Fe: 1 &nbsp;|&nbsp; O: 1.495 ≈ <b>1.5</b></div></div>
-    <div class="step"><div class="sn">3</div><div class="sc">1.5 no es entero → multiplicar ×2: &nbsp;Fe: <b>2</b> &nbsp;|&nbsp; O: <b>3</b></div></div>
-  </div>
-  <div class="tip"><b>Truco:</b> Si sale .5 → ×2 | si sale .33/.67 → ×3 | si sale .25/.75 → ×4</div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">Fe₂O₃</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">16</div><div>
-    <div class="ex-q">Composición centesimal del H₂SO₄</div>
-    <div class="chips"><span class="chip">H=1, S=32, O=16</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">Masa molar = 2+32+4(16) = <b>98 g/mol</b></div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">% H = 2/98×100 = <b>2.04%</b> &nbsp;|&nbsp; % S = 32/98×100 = <b>32.65%</b> &nbsp;|&nbsp; % O = 64/98×100 = <b>65.31%</b></div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">H: 2.04% | S: 32.65% | O: 65.31%</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">17</div><div>
-    <div class="ex-q">Determina la fórmula empírica</div>
-    <div class="chips"><span class="chip">27.3% C</span><span class="chip">72.7% O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">C: 27.3÷12 = 2.275 mol &nbsp;|&nbsp; O: 72.7÷16 = 4.544 mol</div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">÷2.275: &nbsp;C: <b>1</b> &nbsp;|&nbsp; O: <b>2</b></div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CO₂</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">18</div><div>
-    <div class="ex-q">Composición centesimal del NaOH</div>
-    <div class="chips"><span class="chip">Na=23, O=16, H=1</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">Masa molar = 23+16+1 = <b>40 g/mol</b></div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">% Na = (23÷40)×100 = <b>57.5%</b> &nbsp;|&nbsp; % O = <b>40%</b> &nbsp;|&nbsp; % H = <b>2.5%</b></div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">Na: 57.5% | O: 40% | H: 2.5%</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">19</div><div>
-    <div class="ex-q">Determina la fórmula empírica</div>
-    <div class="chips"><span class="chip">63.5% Cu</span><span class="chip">36.5% O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">Cu: 63.5÷63.5 = <b>1.00 mol</b> &nbsp;|&nbsp; O: 36.5÷16 = <b>2.28 mol</b></div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">÷1: Cu=1, O=2.28 → no entero limpio. Por redondeo en datos → O ≈ 2 → CuO₂ no existe. Compuesto más probable: <b>CuO</b></div></div>
-  </div>
-  <div class="tip"><b>Nota:</b> Datos redondeados. La respuesta esperada es CuO (óxido cúprico).</div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CuO</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">20</div><div>
-    <div class="ex-q">% de nitrógeno en NO₂</div>
-    <div class="chips"><span class="chip">N=14, O=16</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">Masa molar NO₂ = 14+2(16) = <b>46 g/mol</b></div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">% N = (14÷46)×100</div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">% N = 30.4%</span></div>
-</div>
+<div class="ex"><div class="ex-top"><div class="ex-num">11</div><div><div class="ex-q">Determina la fórmula empírica</div><div class="chips"><span class="chip">40% C</span><span class="chip">6.7% H</span><span class="chip">53.3% O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">Asumir 100 g → C=40g, H=6.7g (67 67 67 67), O=53.3g</div></div><div class="step"><div class="sn">2</div><div class="sc"><table class="t"><tr><th>Elem.</th><th>mol</th><th>÷ menor (3.33)</th><th>ratio</th></tr><tr><td>C</td><td>40÷12 = 3.33</td><td>1</td><td>1</td></tr><tr><td>H</td><td>6.7÷1 = 6.70</td><td>2</td><td>2</td></tr><tr><td>O</td><td>53.3÷16 = 3.33</td><td>1</td><td>1</td></tr></table></div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CH₂O</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">12</div><div><div class="ex-q">Composición centesimal del CH₄</div><div class="chips"><span class="chip">C=12, H=1</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">Masa molar CH₄ = 12+4(1) = <b>16 g/mol</b></div></div><div class="step"><div class="sn">2</div><div class="sc">% C = (12÷16)×100 = <b>75%</b> &nbsp;|&nbsp; % H = (4÷16)×100 = <b>25%</b></div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">C: 75% | H: 25%</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">13</div><div><div class="ex-q">Determina la fórmula empírica</div><div class="chips"><span class="chip">52.2% C</span><span class="chip">13.0% H</span><span class="chip">34.8% O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc"><table class="t"><tr><th>Elem.</th><th>mol</th><th>÷ menor (2.175)</th><th>ratio</th></tr><tr><td>C</td><td>52.2÷12 = 4.35</td><td>2</td><td>2</td></tr><tr><td>H</td><td>13.0÷1 = 13.0</td><td>5.98 ≈ 6</td><td>6</td></tr><tr><td>O</td><td>34.8÷16 = 2.175</td><td>1</td><td>1</td></tr></table></div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">C₂H₆O</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">14</div><div><div class="ex-q">% de cada elemento en CaCO₃</div><div class="chips"><span class="chip">Ca=40, C=12, O=16</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">Masa molar = 40+12+3(16) = <b>100 g/mol</b></div></div><div class="step"><div class="sn">2</div><div class="sc">% Ca = 40% &nbsp;|&nbsp; % C = 12% &nbsp;|&nbsp; % O = 48%</div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">Ca: 40% | C: 12% | O: 48%</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">15</div><div><div class="ex-q">Determina la fórmula empírica</div><div class="chips"><span class="chip">70% Fe</span><span class="chip">30% O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">Fe: 70÷55.8 = <b>1.254 mol</b> &nbsp;|&nbsp; O: 30÷16 = <b>1.875 mol</b></div></div><div class="step"><div class="sn">2</div><div class="sc">÷1.254: &nbsp;Fe: 1 &nbsp;|&nbsp; O: 1.495 ≈ <b>1.5</b></div></div><div class="step"><div class="sn">3</div><div class="sc">1.5 no es entero → multiplicar ×2: &nbsp;Fe: <b>2</b> &nbsp;|&nbsp; O: <b>3</b></div></div></div><div class="tip"><b>Truco:</b> Si sale .5 → ×2 | si sale .33/.67 → ×3 | si sale .25/.75 → ×4</div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">Fe₂O₃</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">16</div><div><div class="ex-q">Composición centesimal del H₂SO₄</div><div class="chips"><span class="chip">H=1, S=32, O=16</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">Masa molar = 2+32+4(16) = <b>98 g/mol</b></div></div><div class="step"><div class="sn">2</div><div class="sc">% H = 2/98×100 = <b>2.04%</b> &nbsp;|&nbsp; % S = 32/98×100 = <b>32.65%</b> &nbsp;|&nbsp; % O = 64/98×100 = <b>65.31%</b></div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">H: 2.04% | S: 32.65% | O: 65.31%</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">17</div><div><div class="ex-q">Determina la fórmula empírica</div><div class="chips"><span class="chip">27.3% C</span><span class="chip">72.7% O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">C: 27.3÷12 = 2.275 mol &nbsp;|&nbsp; O: 72.7÷16 = 4.544 mol</div></div><div class="step"><div class="sn">2</div><div class="sc">÷2.275: &nbsp;C: <b>1</b> &nbsp;|&nbsp; O: <b>2</b></div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CO₂</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">18</div><div><div class="ex-q">Composición centesimal del NaOH</div><div class="chips"><span class="chip">Na=23, O=16, H=1</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">Masa molar = 23+16+1 = <b>40 g/mol</b></div></div><div class="step"><div class="sn">2</div><div class="sc">% Na = (23÷40)×100 = <b>57.5%</b> &nbsp;|&nbsp; % O = <b>40%</b> &nbsp;|&nbsp; % H = <b>2.5%</b></div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">Na: 57.5% | O: 40% | H: 2.5%</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">19</div><div><div class="ex-q">Determina la fórmula empírica</div><div class="chips"><span class="chip">63.5% Cu</span><span class="chip">36.5% O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">Cu: 63.5÷63.5 = <b>1.00 mol</b> &nbsp;|&nbsp; O: 36.5÷16 = <b>2.28 mol</b></div></div><div class="step"><div class="sn">2</div><div class="sc">÷1: Cu=1, O=2.28 → no entero limpio. Por redondeo en datos → O ≈ 2 → CuO₂ no existe. Compuesto más probable: <b>CuO</b></div></div></div><div class="tip"><b>Nota:</b> Datos redondeados. La respuesta esperada es CuO (óxido cúprico).</div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CuO</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">20</div><div><div class="ex-q">% de nitrógeno en NO₂</div><div class="chips"><span class="chip">N=14, O=16</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">Masa molar NO₂ = 14+2(16) = <b>46 g/mol</b></div></div><div class="step"><div class="sn">2</div><div class="sc">% N = (14÷46)×100</div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">% N = 30.4%</span></div></div>
 
 <!-- ===== NIVEL 3 ===== -->
 <div class="lvl lvl3"><span class="lvl-badge">NIVEL 3</span><span class="lvl-title">Análisis Multietapa</span></div>
 
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">21</div><div>
-    <div class="ex-q">Determina la fórmula empírica</div>
-    <div class="chips"><span class="chip">4 g H</span><span class="chip">32 g O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">H: 4÷1 = <b>4 mol</b> &nbsp;|&nbsp; O: 32÷16 = <b>2 mol</b></div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">÷2 (menor): &nbsp;H: <b>2</b> &nbsp;|&nbsp; O: <b>1</b></div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">H₂O</span><span class="ans-n">agua</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">22</div><div>
-    <div class="ex-q">100 g de compuesto — determina la fórmula empírica</div>
-    <div class="chips"><span class="chip">24 g C</span><span class="chip">4 g H</span><span class="chip">72 g O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">
-      <table class="t">
-        <tr><th>Elem.</th><th>g</th><th>÷ masa at.</th><th>mol</th></tr>
-        <tr><td>C</td><td>24</td><td>÷12</td><td>2.00</td></tr>
-        <tr><td>H</td><td>4</td><td>÷1</td><td>4.00</td></tr>
-        <tr><td>O</td><td>72</td><td>÷16</td><td>4.50</td></tr>
-      </table>
-    </div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">÷2.00 (menor): &nbsp;C: 1 &nbsp;|&nbsp; H: 2 &nbsp;|&nbsp; O: 2.25</div></div>
-    <div class="step"><div class="sn">3</div><div class="sc">O=2.25=9/4 → ×4: &nbsp;C: <b>4</b> &nbsp;|&nbsp; H: <b>8</b> &nbsp;|&nbsp; O: <b>9</b></div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">C₄H₈O₉</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">23</div><div>
-    <div class="ex-q">Determina la fórmula molecular</div>
-    <div class="chips"><span class="chip">FE = CH₂O</span><span class="chip">MM = 180 g/mol</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">ME de CH₂O = 12+2(1)+16 = <b>30 g/mol</b></div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">n = MM÷ME = 180÷30 = <b>6</b></div></div>
-    <div class="step"><div class="sn">3</div><div class="sc">FM = 6×(CH₂O) → C×6, H×12, O×6</div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">C₆H₁₂O₆</span><span class="ans-n">glucosa</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">24</div><div>
-    <div class="ex-q">Determina la fórmula empírica</div>
-    <div class="chips"><span class="chip">10 g Ca</span><span class="chip">8 g C</span><span class="chip">24 g O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">
-      <table class="t">
-        <tr><th>Elem.</th><th>g</th><th>÷ masa at.</th><th>mol</th></tr>
-        <tr><td>Ca</td><td>10</td><td>÷40</td><td>0.250</td></tr>
-        <tr><td>C</td><td>8</td><td>÷12</td><td>0.667</td></tr>
-        <tr><td>O</td><td>24</td><td>÷16</td><td>1.500</td></tr>
-      </table>
-    </div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">÷0.250: &nbsp;Ca: 1 &nbsp;|&nbsp; C: 2.67 &nbsp;|&nbsp; O: 6</div></div>
-    <div class="step"><div class="sn">3</div><div class="sc">C=2.67≈8/3 → ×3: &nbsp;Ca: <b>3</b> &nbsp;|&nbsp; C: <b>8</b> &nbsp;|&nbsp; O: <b>18</b></div></div>
-  </div>
-  <div class="tip"><b>Nota:</b> Datos redondeados. Matemáticamente: Ca₃C₈O₁₈. Químicamente probable: <b>CaCO₃</b>. Consulta con tu profe.</div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">Ca₃C₈O₁₈</span><span class="ans-n">o CaCO₃ si hay redondeo</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">25</div><div>
-    <div class="ex-q">Determina la fórmula empírica</div>
-    <div class="chips"><span class="chip">1.5 mol C</span><span class="chip">3 mol H</span><span class="chip">1.5 mol O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">Ya en moles → ÷1.5 (menor): &nbsp;C: <b>1</b> &nbsp;|&nbsp; H: <b>2</b> &nbsp;|&nbsp; O: <b>1</b></div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CH₂O</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">26</div><div>
-    <div class="ex-q">Determina la fórmula empírica</div>
-    <div class="chips"><span class="chip">48% C</span><span class="chip">8% H</span><span class="chip">44% O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">100 g → C=48g, H=8g, O=44g</div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">
-      <table class="t">
-        <tr><th>Elem.</th><th>mol</th><th>÷ menor (2.75)</th><th>×2 → entero</th></tr>
-        <tr><td>C</td><td>4.00</td><td>1.45</td><td>≈ 3</td></tr>
-        <tr><td>H</td><td>8.00</td><td>2.91</td><td>≈ 6</td></tr>
-        <tr><td>O</td><td>2.75</td><td>1.00</td><td>2</td></tr>
-      </table>
-    </div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">C₃H₆O₂</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">27</div><div><div class="ex-q">Si la masa molar es el doble de la empírica, ¿qué implica?</div></div></div>
-  <div class="concept">Implica que <b>n = MM ÷ ME = 2</b>. La fórmula molecular tiene el doble de átomos que la empírica. Cada subíndice se multiplica por 2.
-    <div class="eg">FE = CH₂ → FM = C₂H₄ (etileno)</div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">n=2 → FM = 2×(FE)</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">28</div><div>
-    <div class="ex-q">Determina la fórmula empírica</div>
-    <div class="chips"><span class="chip">32% S</span><span class="chip">68% O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">S: 32÷32 = <b>1.00 mol</b> &nbsp;|&nbsp; O: 68÷16 = <b>4.25 mol</b></div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">÷1: S=1, O=4.25 → ×4: S:<b>4</b>, O:<b>17</b>. Por redondeo: O≈4 → <b>SO₄</b></div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">SO₄</span><span class="ans-n">o S₄O₁₇ exacto</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">29</div><div>
-    <div class="ex-q">Compuesto orgánico — determina la fórmula empírica</div>
-    <div class="chips"><span class="chip">6 g C</span><span class="chip">1 g H</span><span class="chip">8 g O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">C: 6÷12 = <b>0.5 mol</b> &nbsp;|&nbsp; H: 1÷1 = <b>1.0 mol</b> &nbsp;|&nbsp; O: 8÷16 = <b>0.5 mol</b></div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">÷0.5: &nbsp;C: <b>1</b> &nbsp;|&nbsp; H: <b>2</b> &nbsp;|&nbsp; O: <b>1</b></div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CH₂O</span><span class="ans-n">misma FE que glucosa</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">30</div><div><div class="ex-q">¿Cómo afecta un error en la masa molar a la fórmula molecular?</div></div></div>
-  <div class="concept">n = MM ÷ ME. Si la MM está mal, n cambia y <b>todos los subíndices</b> de la FM son incorrectos.
-    <div class="eg">ME=30 | MM real=90 → n=3 → C₃H₆O₃ ✓<br>Si usas MM=60 → n=2 → C₂H₄O₂ ✗</div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">Error en MM → n incorrecto → FM incorrecta</span></div>
-</div>
+<div class="ex"><div class="ex-top"><div class="ex-num">21</div><div><div class="ex-q">Determina la fórmula empírica</div><div class="chips"><span class="chip">4 g H</span><span class="chip">32 g O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">H: 4÷1 = <b>4 mol</b> &nbsp;|&nbsp; O: 32÷16 = <b>2 mol</b></div></div><div class="step"><div class="sn">2</div><div class="sc">÷2 (menor): &nbsp;H: <b>2</b> &nbsp;|&nbsp; O: <b>1</b></div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">H₂O</span><span class="ans-n">agua</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">22</div><div><div class="ex-q">100 g de compuesto — determina la fórmula empírica</div><div class="chips"><span class="chip">24 g C</span><span class="chip">4 g H</span><span class="chip">72 g O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc"><table class="t"><tr><th>Elem.</th><th>g</th><th>÷ masa at.</th><th>mol</th></tr><tr><td>C</td><td>24</td><td>÷12</td><td>2.00</td></tr><tr><td>H</td><td>4</td><td>÷1</td><td>4.00</td></tr><tr><td>O</td><td>72</td><td>÷16</td><td>4.50</td></tr></table></div></div><div class="step"><div class="sn">2</div><div class="sc">÷2.00 (menor): &nbsp;C: 1 &nbsp;|&nbsp; H: 2 &nbsp;|&nbsp; O: 2.25</div></div><div class="step"><div class="sn">3</div><div class="sc">O=2.25=9/4 → ×4: &nbsp;C: <b>4</b> &nbsp;|&nbsp; H: <b>8</b> &nbsp;|&nbsp; O: <b>9</b></div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">C₄H₈O₉</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">23</div><div><div class="ex-q">Determina la fórmula molecular</div><div class="chips"><span class="chip">FE = CH₂O</span><span class="chip">MM = 180 g/mol</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">ME de CH₂O = 12+2(1)+16 = <b>30 g/mol</b></div></div><div class="step"><div class="sn">2</div><div class="sc">n = MM÷ME = 180÷30 = <b>6</b></div></div><div class="step"><div class="sn">3</div><div class="sc">FM = 6×(CH₂O) → C×6, H×12, O×6</div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">C₆H₁₂O₆</span><span class="ans-n">glucosa</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">24</div><div><div class="ex-q">Determina la fórmula empírica</div><div class="chips"><span class="chip">10 g Ca</span><span class="chip">8 g C</span><span class="chip">24 g O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc"><table class="t"><tr><th>Elem.</th><th>g</th><th>÷ masa at.</th><th>mol</th></tr><tr><td>Ca</td><td>10</td><td>÷40</td><td>0.250</td></tr><tr><td>C</td><td>8</td><td>÷12</td><td>0.667</td></tr><tr><td>O</td><td>24</td><td>÷16</td><td>1.500</td></tr></table></div></div><div class="step"><div class="sn">2</div><div class="sc">÷0.250: &nbsp;Ca: 1 &nbsp;|&nbsp; C: 2.67 &nbsp;|&nbsp; O: 6</div></div><div class="step"><div class="sn">3</div><div class="sc">C=2.67≈8/3 → ×3: &nbsp;Ca: <b>3</b> &nbsp;|&nbsp; C: <b>8</b> &nbsp;|&nbsp; O: <b>18</b></div></div></div><div class="tip"><b>Nota:</b> Datos redondeados. Matemáticamente: Ca₃C₈O₁₈. Químicamente probable: <b>CaCO₃</b>. Consulta con tu profe.</div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">Ca₃C₈O₁₈</span><span class="ans-n">o CaCO₃ si hay redondeo</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">25</div><div><div class="ex-q">Determina la fórmula empírica</div><div class="chips"><span class="chip">1.5 mol C</span><span class="chip">3 mol H</span><span class="chip">1.5 mol O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">Ya en moles → ÷1.5 (menor): &nbsp;C: <b>1</b> &nbsp;|&nbsp; H: <b>2</b> &nbsp;|&nbsp; O: <b>1</b></div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CH₂O</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">26</div><div><div class="ex-q">Determina la fórmula empírica</div><div class="chips"><span class="chip">48% C</span><span class="chip">8% H</span><span class="chip">44% O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">100 g → C=48g, H=8g, O=44g</div></div><div class="step"><div class="sn">2</div><div class="sc"><table class="t"><tr><th>Elem.</th><th>mol</th><th>÷ menor (2.75)</th><th>×2 → entero</th></tr><tr><td>C</td><td>4.00</td><td>1.45</td><td>≈ 3</td></tr><tr><td>H</td><td>8.00</td><td>2.91</td><td>≈ 6</td></tr><tr><td>O</td><td>2.75</td><td>1.00</td><td>2</td></tr></table></div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">C₃H₆O₂</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">27</div><div><div class="ex-q">Si la masa molar es el doble de la empírica, ¿qué implica?</div></div></div><div class="concept">Implica que <b>n = MM ÷ ME = 2</b>. La fórmula molecular tiene el doble de átomos que la empírica. Cada subíndice se multiplica por 2.<div class="eg">FE = CH₂ → FM = C₂H₄ (etileno)</div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">n=2 → FM = 2×(FE)</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">28</div><div><div class="ex-q">Determina la fórmula empírica</div><div class="chips"><span class="chip">32% S</span><span class="chip">68% O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">S: 32÷32 = <b>1.00 mol</b> &nbsp;|&nbsp; O: 68÷16 = <b>4.25 mol</b></div></div><div class="step"><div class="sn">2</div><div class="sc">÷1: S=1, O=4.25 → ×4: S:<b>4</b>, O:<b>17</b>. Por redondeo: O≈4 → <b>SO₄</b></div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">SO₄</span><span class="ans-n">o S₄O₁₇ exacto</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">29</div><div><div class="ex-q">Compuesto orgánico — determina la fórmula empírica</div><div class="chips"><span class="chip">6 g C</span><span class="chip">1 g H</span><span class="chip">8 g O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">C: 6÷12 = <b>0.5 mol</b> &nbsp;|&nbsp; H: 1÷1 = <b>1.0 mol</b> &nbsp;|&nbsp; O: 8÷16 = <b>0.5 mol</b></div></div><div class="step"><div class="sn">2</div><div class="sc">÷0.5: &nbsp;C: <b>1</b> &nbsp;|&nbsp; H: <b>2</b> &nbsp;|&nbsp; O: <b>1</b></div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CH₂O</span><span class="ans-n">misma FE que glucosa</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">30</div><div><div class="ex-q">¿Cómo afecta un error en la masa molar a la fórmula molecular?</div></div></div><div class="concept">n = MM ÷ ME. Si la MM está mal, n cambia y <b>todos los subíndices</b> de la FM son incorrectos.<div class="eg">ME=30 | MM real=90 → n=3 → C₃H₆O₃ ✓<br>Si usas MM=60 → n=2 → C₂H₄O₂ ✗</div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">Error en MM → n incorrecto → FM incorrecta</span></div></div>
 
 <!-- ===== NIVEL 4 ===== -->
 <div class="lvl lvl4"><span class="lvl-badge">NIVEL 4</span><span class="lvl-title">Nivel Experto — Tipo Examen</span></div>
 
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">31</div><div>
-    <div class="ex-q">Fertilizante — determina FE y FM</div>
-    <div class="chips"><span class="chip">35% N</span><span class="chip">5% H</span><span class="chip">60% O</span><span class="chip">MM = 80 g/mol</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">
-      <table class="t">
-        <tr><th>Elem.</th><th>mol</th><th>÷ menor (2.50)</th><th>×2</th></tr>
-        <tr><td>N</td><td>35÷14 = 2.50</td><td>1</td><td>2</td></tr>
-        <tr><td>H</td><td>5÷1 = 5.00</td><td>2</td><td>4</td></tr>
-        <tr><td>O</td><td>60÷16 = 3.75</td><td>1.5 → ×2</td><td>3</td></tr>
-      </table>
-    </div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">FE = N₂H₄O₃ &nbsp;|&nbsp; ME = 2(14)+4(1)+3(16) = <b>80 g/mol</b></div></div>
-    <div class="step"><div class="sn">3</div><div class="sc">n = 80÷80 = <b>1</b> → FM = FE</div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">FE = FM = N₂H₄O₃</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">32</div><div>
-    <div class="ex-q">Compuesto orgánico — determina la FM</div>
-    <div class="chips"><span class="chip">40% C</span><span class="chip">6.7% H</span><span class="chip">53.3% O</span><span class="chip">MM = 180 g/mol</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">FE = CH₂O (igual al ej. 11) → ME = 30 g/mol</div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">n = 180÷30 = <b>6</b> → FM = 6×(CH₂O)</div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">C₆H₁₂O₆</span><span class="ans-n">glucosa</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">33</div><div>
-    <div class="ex-q">Óxido metálico — determina la FE</div>
-    <div class="chips"><span class="chip">72.4% metal</span><span class="chip">27.6% O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">O: 27.6÷16 = 1.725 mol &nbsp;|&nbsp; Asumiendo Fe (55.8): 72.4÷55.8 = 1.297 mol</div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">÷1.297: &nbsp;Fe: 1 &nbsp;|&nbsp; O: 1.33 → ×3: &nbsp;Fe: <b>3</b> &nbsp;|&nbsp; O: <b>4</b></div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">Fe₃O₄</span><span class="ans-n">magnetita</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">34</div><div>
-    <div class="ex-q">Industria alimentaria — determina la FE</div>
-    <div class="chips"><span class="chip">42.1% C</span><span class="chip">6.5% H</span><span class="chip">51.4% O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">C: 42.1÷12 = 3.51 mol &nbsp;|&nbsp; H: 6.5÷1 = 6.5 mol &nbsp;|&nbsp; O: 51.4÷16 = 3.21 mol</div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">÷3.21: &nbsp;C: 1.09≈1 &nbsp;|&nbsp; H: 2.02≈2 &nbsp;|&nbsp; O: 1</div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CH₂O</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">35</div><div>
-    <div class="ex-q">Determina la fórmula empírica</div>
-    <div class="chips"><span class="chip">0.2 mol C</span><span class="chip">0.4 mol H</span><span class="chip">0.2 mol O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">Ya en moles → ÷0.2 (menor): &nbsp;C: <b>1</b> &nbsp;|&nbsp; H: <b>2</b> &nbsp;|&nbsp; O: <b>1</b></div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CH₂O</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">36</div><div>
-    <div class="ex-q">Determina la FE y FM</div>
-    <div class="chips"><span class="chip">50% C</span><span class="chip">50% O</span><span class="chip">MM = 56 g/mol</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">C: 50÷12 = 4.167 mol &nbsp;|&nbsp; O: 50÷16 = 3.125 mol</div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">÷3.125: &nbsp;C: 1.33 &nbsp;|&nbsp; O: 1 → ×3: C:<b>4</b>, O:<b>3</b> → ME = 4(12)+3(16) = 96 g/mol<br>Revisando FE=CO: ME=28 → n=56÷28=<b>2</b> → FM=C₂O₂</div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">FE = CO | FM = C₂O₂</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">37</div><div>
-    <div class="ex-q">Determina la fórmula molecular</div>
-    <div class="chips"><span class="chip">ME = 30 g/mol</span><span class="chip">MM = 60 g/mol</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">n = 60÷30 = <b>2</b></div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">FM = 2×(FE) → todos los subíndices ×2<br>Ej: si FE=CH₂O → FM = C₂H₄O₂</div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">n=2 → todos los subíndices ×2</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">38</div><div>
-    <div class="ex-q">Determina la fórmula empírica</div>
-    <div class="chips"><span class="chip">23% Na</span><span class="chip">35% Cl</span><span class="chip">42% O</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">Na: 23÷23 = <b>1.00</b> &nbsp;|&nbsp; Cl: 35÷35.5 = <b>0.986≈1.00</b> &nbsp;|&nbsp; O: 42÷16 = <b>2.625</b></div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">÷1: Na=1, Cl=1, O=2.625 ≈ 2.5 → ×2: Na:<b>2</b>, Cl:<b>2</b>, O:<b>5</b> → simplifica a NaClO₂.₅<br>Compuesto probable: <b>NaClO₃</b> (clorato de sodio)</div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">NaClO₃</span><span class="ans-n">clorato de sodio</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">39</div><div>
-    <div class="ex-q">Hidrocarburo — determina la fórmula empírica</div>
-    <div class="chips"><span class="chip">85.7% C</span><span class="chip">14.3% H</span></div>
-  </div></div>
-  <div class="steps">
-    <div class="step"><div class="sn">1</div><div class="sc">C: 85.7÷12 = <b>7.142 mol</b> &nbsp;|&nbsp; H: 14.3÷1 = <b>14.3 mol</b></div></div>
-    <div class="step"><div class="sn">2</div><div class="sc">÷7.142: &nbsp;C: <b>1</b> &nbsp;|&nbsp; H: <b>2.00</b></div></div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CH₂</span></div>
-</div>
-
-<div class="ex">
-  <div class="ex-top"><div class="ex-num">40</div><div><div class="ex-q">¿Por qué dos compuestos con la misma FE tienen propiedades distintas?</div></div></div>
-  <div class="concept">Porque pueden tener distinta <b>fórmula molecular</b> (n diferente), distinta <b>estructura</b>, distintos <b>grupos funcionales</b> y distintos tipos de enlace. La FE solo dice la razón de átomos, no cómo están conectados.
-    <div class="eg">Glucosa y fructosa: ambas C₆H₁₂O₆, misma FM y FE (CH₂O), pero estructura distinta → propiedades distintas.</div>
-  </div>
-  <div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">Misma FE ≠ misma estructura → propiedades distintas</span></div>
-</div>
+<div class="ex"><div class="ex-top"><div class="ex-num">31</div><div><div class="ex-q">Fertilizante — determina FE y FM</div><div class="chips"><span class="chip">35% N</span><span class="chip">5% H</span><span class="chip">60% O</span><span class="chip">MM = 80 g/mol</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc"><table class="t"><tr><th>Elem.</th><th>mol</th><th>÷ menor (2.50)</th><th>×2</th></tr><tr><td>N</td><td>35÷14 = 2.50</td><td>1</td><td>2</td></tr><tr><td>H</td><td>5÷1 = 5.00</td><td>2</td><td>4</td></tr><tr><td>O</td><td>60÷16 = 3.75</td><td>1.5 → ×2</td><td>3</td></tr></table></div></div><div class="step"><div class="sn">2</div><div class="sc">FE = N₂H₄O₃ &nbsp;|&nbsp; ME = 2(14)+4(1)+3(16) = <b>80 g/mol</b></div></div><div class="step"><div class="sn">3</div><div class="sc">n = 80÷80 = <b>1</b> → FM = FE</div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">FE = FM = N₂H₄O₃</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">32</div><div><div class="ex-q">Compuesto orgánico — determina la FM</div><div class="chips"><span class="chip">40% C</span><span class="chip">6.7% H</span><span class="chip">53.3% O</span><span class="chip">MM = 180 g/mol</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">FE = CH₂O (igual al ej. 11) → ME = 30 g/mol</div></div><div class="step"><div class="sn">2</div><div class="sc">n = 180÷30 = <b>6</b> → FM = 6×(CH₂O)</div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">C₆H₁₂O₆</span><span class="ans-n">glucosa</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">33</div><div><div class="ex-q">Óxido metálico — determina la FE</div><div class="chips"><span class="chip">72.4% metal</span><span class="chip">27.6% O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">O: 27.6÷16 = 1.725 mol &nbsp;|&nbsp; Asumiendo Fe (55.8): 72.4÷55.8 = 1.297 mol</div></div><div class="step"><div class="sn">2</div><div class="sc">÷1.297: &nbsp;Fe: 1 &nbsp;|&nbsp; O: 1.33 → ×3: &nbsp;Fe: <b>3</b> &nbsp;|&nbsp; O: <b>4</b></div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">Fe₃O₄</span><span class="ans-n">magnetita</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">34</div><div><div class="ex-q">Industria alimentaria — determina la FE</div><div class="chips"><span class="chip">42.1% C</span><span class="chip">6.5% H</span><span class="chip">51.4% O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">C: 42.1÷12 = 3.51 mol &nbsp;|&nbsp; H: 6.5÷1 = 6.5 mol &nbsp;|&nbsp; O: 51.4÷16 = 3.21 mol</div></div><div class="step"><div class="sn">2</div><div class="sc">÷3.21: &nbsp;C: 1.09≈1 &nbsp;|&nbsp; H: 2.02≈2 &nbsp;|&nbsp; O: 1</div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CH₂O</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">35</div><div><div class="ex-q">Determina la fórmula empírica</div><div class="chips"><span class="chip">0.2 mol C</span><span class="chip">0.4 mol H</span><span class="chip">0.2 mol O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">Ya en moles → ÷0.2 (menor): &nbsp;C: <b>1</b> &nbsp;|&nbsp; H: <b>2</b> &nbsp;|&nbsp; O: <b>1</b></div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CH₂O</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">36</div><div><div class="ex-q">Determina la FE y FM</div><div class="chips"><span class="chip">50% C</span><span class="chip">50% O</span><span class="chip">MM = 56 g/mol</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">C: 50÷12 = 4.167 mol &nbsp;|&nbsp; O: 50÷16 = 3.125 mol</div></div><div class="step"><div class="sn">2</div><div class="sc">÷3.125: &nbsp;C: 1.33 &nbsp;|&nbsp; O: 1 → ×3: C:<b>4</b>, O:<b>3</b> → ME = 4(12)+3(16) = 96 g/mol<br>Revisando FE=CO: ME=28 → n=56÷28=<b>2</b> → FM=C₂O₂</div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">FE = CO | FM = C₂O₂</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">37</div><div><div class="ex-q">Determina la fórmula molecular</div><div class="chips"><span class="chip">ME = 30 g/mol</span><span class="chip">MM = 60 g/mol</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">n = 60÷30 = <b>2</b></div></div><div class="step"><div class="sn">2</div><div class="sc">FM = 2×(FE) → todos los subíndices ×2<br>Ej: si FE=CH₂O → FM = C₂H₄O₂</div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">n=2 → todos los subíndices ×2</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">38</div><div><div class="ex-q">Determina la fórmula empírica</div><div class="chips"><span class="chip">23% Na</span><span class="chip">35% Cl</span><span class="chip">42% O</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">Na: 23÷23 = <b>1.00</b> &nbsp;|&nbsp; Cl: 35÷35.5 = <b>0.986≈1.00</b> &nbsp;|&nbsp; O: 42÷16 = <b>2.625</b></div></div><div class="step"><div class="sn">2</div><div class="sc">÷1: Na=1, Cl=1, O=2.625 ≈ 2.5 → ×2: Na:<b>2</b>, Cl:<b>2</b>, O:<b>5</b> → simplifica a NaClO₂.₅<br>Compuesto probable: <b>NaClO₃</b> (clorato de sodio)</div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">NaClO₃</span><span class="ans-n">clorato de sodio</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">39</div><div><div class="ex-q">Hidrocarburo — determina la fórmula empírica</div><div class="chips"><span class="chip">85.7% C</span><span class="chip">14.3% H</span></div></div></div><div class="steps"><div class="step"><div class="sn">1</div><div class="sc">C: 85.7÷12 = <b>7.142 mol</b> &nbsp;|&nbsp; H: 14.3÷1 = <b>14.3 mol</b></div></div><div class="step"><div class="sn">2</div><div class="sc">÷7.142: &nbsp;C: <b>1</b> &nbsp;|&nbsp; H: <b>2.00</b></div></div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">CH₂</span></div></div>
+<div class="ex"><div class="ex-top"><div class="ex-num">40</div><div><div class="ex-q">¿Por qué dos compuestos con la misma FE tienen propiedades distintas?</div></div></div><div class="concept">Porque pueden tener distinta <b>fórmula molecular</b> (n diferente), distinta <b>estructura</b>, distintos <b>grupos funcionales</b> y distintos tipos de enlace. La FE solo dice la razón de átomos, no cómo están conectados.<div class="eg">Glucosa y fructosa: ambas C₆H₁₂O₆, misma FM y FE (CH₂O), pero estructura distinta → propiedades distintas.</div></div><div class="ans"><span class="ans-lbl">Respuesta</span><span class="ans-f">Misma FE ≠ misma estructura → propiedades distintas</span></div></div>
 
 <footer>QUÍMICA · RETROALIMENTACIÓN COMPLETA · NIVELES 1–4 · EJERCICIOS 1–40</footer>
 </div>
